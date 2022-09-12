@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tugas 1 Javascript</title>
+</head>
+	<script language="javascript">
+    var pegawai = "Ridwan";
+    var jabatan = "Manager";
+    var status = "Menikah";
+    let gapok;
+    
+    if(jabatan = "Manager"){
+        gapok = 15000000;
+    }
+    else if(jabatan = "Asisten Manager"){
+        gapok = 10000000;
+    }
+    else  if(jabatan = "Staff"){
+        gapok = 5000000;
+    }
+    
+    let tunjab = (gapok * 0.15);
+    let bpjs = (gapok * 0.1);
+    let tunkel = status == "Menikah" ? gapok * 0.2 : 0;
+    let totalgaji = gapok + tunjab + bpjs + tunkel;
+
+    document.write(`
+    Pegawai: ${pegawai} <br/>
+    Jabatan: ${jabatan} <br/>
+    Status: ${status} <br/>
+
+    <table border="1" cellpadding="10" width="25%">
+            <thead>
+                <tr>
+                    <th>Data Gaji</th>
+                    <th>Total Gaji</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gaji Pokok</td>
+                    <td>${gapok}</td>
+                </tr>
+                <tr>
+                    <td>Tunjangan Jabatan</td>
+                    <td>${tunjab}</td>
+                </tr>
+                <tr>
+                    <td>Tunjangan Keluarga</td>
+                    <td>${tunkel}</td>
+                </tr>
+                <tr>
+                    <td>BPJS</td>
+                    <td>${bpjs}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>${totalgaji}</td>
+                </tr>
+            </tfoot>
+        </table>
+    `)
+</script>
+</html>
